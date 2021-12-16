@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  background-color: #4056A1;
+  color: #FFFFFF;
+}
+
+.fa-angle-double-down {
+  color: #FF0000;
+}
+
+#navbar-tweeter-logo {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  font-size: 35px;
+}
+
+#nav-tweet-arrow {
+  flex-direction: column;
+}
