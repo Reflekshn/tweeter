@@ -27,12 +27,15 @@
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 </head>
 
@@ -40,14 +43,37 @@
   <!-- Top nav bar (fixed) -->
   <nav class="navbar">
     <span id="navbar-tweeter-logo">Tweeter</span>
-    <div id="nav-tweet-arrow">
+    <div id="navbar-new-tweet">
       <div><span><strong>Write</strong> a new tweet</span></div>
       <i class="fas fa-angle-double-down"></i>
     </div>
   </nav>
 
   <!-- Page-specific (main) content here -->
+  <header>
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Jane Doe</h2>
+    </div>
+  </header>
+
   <main class="container">
+    <section id="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="/tweets">
+        <div id="new-tweet-container">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="tweet-text" cols=70 row=2 minlength=1 maxlength=140 spellcheck="true" required></textarea>
+        </div>
+        <div id="new-tweet-submit-container">
+          <button type="submit" id="tweet-button">Tweet</button>
+          <output name="counter" id="tweet-char-counter" for="new-tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 
