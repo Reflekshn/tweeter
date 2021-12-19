@@ -1,28 +1,28 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 120px;
   width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
   background-color: blue;
   color: white;
-}
-
-.fa-angle-double-down {
   display: flex;
-  color: red;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0px;
 }
 
-#navbar-tweeter-logo {
-  display: flex;
-  font-family: 'Bungee', cursive;
-  font-size: 35px;
-}
-
-#navbar-new-tweet {
+.navbar-new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.fa-angle-double-down {
+  color: red;
+}
+
+.navbar-tweeter-logo {
+  font-family: 'Bungee', cursive;
+  font-size: 35px;
 }

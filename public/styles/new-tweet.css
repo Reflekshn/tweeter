@@ -1,33 +1,33 @@
-#new-tweet {
+.new-tweet-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 
-#new-tweet-container {
+.new-tweet {
   display: flex;
   flex-direction: column;
-  border-bottom: 3px solid black;
 }
 
-#new-tweet-submit-container {
+.new-tweet-submit-container {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
 }
 
-#tweet-button {
+.new-tweet-text {
+  background-color: #e4ddd1;
+  color: #000000;
+  border: none;
+  outline: none;
+  height: 30px;
+  font-size: 18px;
+}
+
+.tweet-button {
   color: white;
   background-color: blue;
-}
-
-#tweet-char-counter {
   font-family: 'Bungee', cursive;
 }
 
-textarea {
-  background-color: #f4f1ec;
-  border: none;
-  font-size: 18px;
+.tweet-char-counter {
+  font-family: 'Bungee', cursive;
 }

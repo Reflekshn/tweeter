@@ -1,10 +1,11 @@
-header {
+.main-header {
   display: flex;
-  height: 400px;
-  width: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-image: url('../images/asfalt-dark.png');
-  background-color: orange;
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  background-image: url('/images/asfalt-dark.png');
+  background-color: #ffa500;
 }

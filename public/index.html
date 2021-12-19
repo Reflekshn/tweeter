@@ -16,13 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
-      rel="stylesheet">
-
-    <!-- Source Sans Pro Google Font - 600 weight -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
       rel="stylesheet">
 
     <!-- App CSS -->
@@ -30,6 +24,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,38 +38,60 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav class="navbar">
-      <span id="navbar-tweeter-logo">Tweeter</span>
-      <div id="navbar-new-tweet">
-        <div><span><strong>Write</strong> a new tweet</span></div>
+      <span class="navbar-tweeter-logo">Tweeter</span>
+      <div class="navbar-new-tweet">
+        <div style="float:right;"> <strong> Write </strong> a new tweet </div>
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
 
     <!-- Page-specific (main) content here -->
-    <header>
+    <header class=main-header>
       <div>
         <img src="/images/profile-hex.png">
       </div>
-      <br>
       <div>
         <h2>Jane Doe</h2>
       </div>
     </header>
 
-    <main class="container">
-      <section id="new-tweet">
+    <main class="main-container">
+
+      <!-- New Tweet Container -->
+      <section class="new-tweet-container">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <div id="new-tweet-container">
+          <div class="new-tweet">
             <label for="tweet-text">What are you humming about?</label>
-            <textarea name="tweet-text" cols=70 row=2 minlength=1 maxlength=140 spellcheck="true" required></textarea>
+            <textarea name="tweet-text" class="new-tweet-text" cols="70" rows="2" spellcheck="true"></textarea>
           </div>
-          <div id="new-tweet-submit-container">
-            <button type="submit" id="tweet-button">Tweet</button>
-            <output name="counter" id="tweet-char-counter" for="new-tweet-text">140</output>
+          <hr size="5" width="100%" color="black">
+          <div class="new-tweet-submit-container">
+            <button type="submit" class="tweet-button">Tweet</button>
+            <output name="counter" class="tweet-char-counter" for="new-tweet-text">140</output>
           </div>
         </form>
       </section>
+
+      <!-- Posted Tweets Container -->
+      <article class="tweet-container">
+        <header class="tweet-header">
+          <div class="tweet-icon-and-name">
+            <img src="https://i.imgur.com/73hZDYK.png">
+            <span>Newton</span>
+          </div>
+          <p class="tweeter-handle">@SirIsaac</p>
+        </header>
+        <p class="tweet-placeholder">
+          If I have seen further it is by standing on the shoulders of giants
+        </p>
+        <hr size="5" width="95%" color="black">
+        <footer class="tweet-footer">
+          <p>10 days ago</p>
+          <span><i class="fas fa-flag"></i>     <i class="fas fa-retweet"></i>     <i class="fas fa-heart"></i></span>
+        </footer>
+      </article>
+
     </main>
   </body>
 
