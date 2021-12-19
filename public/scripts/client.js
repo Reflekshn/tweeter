@@ -18,7 +18,7 @@ $(document).ready(function() {
           <p class="tweeter-handle">${tweet.user.handle}</p>
         </header>
         <p class="tweet-text">
-        ${tweet.content.text}
+        ${escape(tweet.content.text)}
         </p>
         <hr size="5" width="95%" color="black">
         <footer class="tweet-footer">
