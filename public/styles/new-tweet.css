@@ -31,3 +31,11 @@
 .tweet-char-counter {
   font-family: 'Bungee', cursive;
 }
+
+.error {
+  display: none;
+  border: 2px solid red;
+  color: red; 
+  font-weight: 600;
+  font-size: 30px;
+}
