@@ -96,6 +96,6 @@ $(document).ready(function() {
       })
 
   }
-  $('.tweet-form').submit(formSubmission);
+  $(".tweet-form").submit(formSubmission);
 });
 
