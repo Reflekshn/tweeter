@@ -17,7 +17,7 @@ $(document).ready(function() {
           </div>
           <p class="tweeter-handle">${tweet.user.handle}</p>
         </header>
-        <p class="tweet-text">
+        <p id="new-tweet-text">
         ${escape(tweet.content.text)}
         </p>
         <hr size="5" width="95%" color="black">
@@ -72,7 +72,7 @@ $(document).ready(function() {
   const formSubmission = function(event) {
     event.preventDefault();
 
-    const userInput = $(".new-tweet-text").val();
+    const userInput = $("#new-tweet-text").val();
 
     //Form Validation
     if (!userInput) {
@@ -84,13 +84,13 @@ $(document).ready(function() {
       return null;
     }
 
-    const serializedInput = $(".new-tweet-text").serialize();
+    const serializedInput = $("#new-tweet-text").serialize();
 
     //Update and post new tweet
     $.post("/tweets", serializedInput)
       .then(() => {
         console.log(serializedInput);
-        $(".new-tweet-text").val('');
+        $("#new-tweet-text").val('');
         $(".tweet-char-counter").val(140);
         loadTweets();
       })

@@ -13,7 +13,7 @@
   justify-content: space-between;
 }
 
-.new-tweet-text {
+#new-tweet-text {
   background-color: #e4ddd1;
   color: #000000;
   border: none;
@@ -35,7 +35,8 @@
 .error {
   display: none;
   border: 2px solid red;
-  color: red; 
+  color: red;
+  margin-bottom: 1em;
   font-weight: 600;
   font-size: 30px;
 }
