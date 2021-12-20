@@ -69,33 +69,33 @@ $(document).ready(function() {
   loadTweets();
 
   // Intercept default form submission action and implement our own logic
-  const formSubmission = function(event) {
+  $(".tweet-form").submit(function(event) {
     event.preventDefault();
 
-    const userInput = $("#new-tweet-text").val();
+    const serializedData = $(this).serialize();
+
+    const $input = $("#new-tweet-text");
 
     //Form Validation
-    if (!userInput) {
+    if ($input.val() === "") {
       $(".error").text("Tweet is empty. Please enter some text.").slideDown().delay(2500).hide(500);
       return null;
     }
-    if (userInput.length > 140) {
+    if ($input.val().length > 140) {
       $(".error").text("You are over the text limit. Please edit your tweet.").slideDown().delay(2500).hide(500);
       return null;
     }
 
-    const serializedInput = $("#new-tweet-text").serialize();
-
-    //Update and post new tweet
-    $.post("/tweets", serializedInput)
-      .then(() => {
-        console.log(serializedInput);
-        $("#new-tweet-text").val('');
-        $(".tweet-char-counter").val(140);
-        loadTweets();
-      })
-
-  }
-  $(".tweet-form").submit(formSubmission);
+    // AJAX POST request for new tweet
+    $.ajax({
+      data: serializedData,
+      method: "POST",
+      url: "/tweets",
+    }).then(function() {
+      $input.val("");
+      $(".tweet-char-counter").val(140);
+      loadTweets();
+    });
+  });
 });
 
