@@ -72,7 +72,7 @@ $(document).ready(function() {
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
 
-    const serializedData = $(this).serialize();
+    const serializedData = $("#new-tweet-text").serialize();
 
     const $input = $("#new-tweet-text");
 
