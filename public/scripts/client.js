@@ -72,9 +72,9 @@ $(document).ready(function() {
   $(".tweet-form").submit(function(event) {
     event.preventDefault();
 
-    const serializedData = $("#new-tweet-text").serialize();
+    const serializedData = $(".new-tweet-text").serialize();
 
-    const $input = $("#new-tweet-text");
+    const $input = $(".new-tweet-text");
 
     //Form Validation
     if ($input.val() === "") {

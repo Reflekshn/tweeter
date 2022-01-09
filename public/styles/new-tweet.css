@@ -14,10 +14,11 @@
   justify-content: space-between;
 }
 
-#new-tweet-text {
-  background-color: #e4ddd1;
+.new-tweet-text {
+  background-color: transparent;
   color: #000000;
   border: none;
+  border-bottom: 5px solid black;
   outline: none;
   height: 48px;
   font-size: 24px;
@@ -26,8 +27,10 @@
 
 .tweet-button {
   color: white;
-  background-color: blue;
+  background-color: #1f2d79;
   font-family: 'Bungee', cursive;
+  font-size: 18px;
+  padding: 5px 15px;
 }
 
 .tweet-char-counter {

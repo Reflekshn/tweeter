@@ -67,11 +67,9 @@
         <span class="error"></span>
         <form class="tweet-form" method="POST" action="/tweets">
           <div class="new-tweet">
-            <!-- <label for="new-tweet-text">What are you humming about?</label> -->
-            <textarea name="text" id="new-tweet-text" spellcheck="true" wrap="off" rows="1"
+            <textarea name="text" class="new-tweet-text" spellcheck="true" wrap="off" rows="1"
               placeholder="What are you humming about?" autofocus></textarea>
           </div>
-          <hr size="5" width="100%" color="black">
           <div class="new-tweet-submit-container">
             <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="tweet-char-counter" for="new-tweet-text">140</output>
