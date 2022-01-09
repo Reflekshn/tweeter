@@ -1,15 +1,14 @@
 .navbar {
-  height: 120px;
+  height: 100px;
   width: 100%;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background-color: blue;
+  background-color: #1f2d79;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0px;
 }
 
 .navbar-new-tweet {

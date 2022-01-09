@@ -67,8 +67,9 @@
         <span class="error"></span>
         <form class="tweet-form" method="POST" action="/tweets">
           <div class="new-tweet">
-            <label for="new-tweet-text">What are you humming about?</label>
-            <textarea name="text" id="new-tweet-text" cols="70" rows="2" spellcheck="true"></textarea>
+            <!-- <label for="new-tweet-text">What are you humming about?</label> -->
+            <textarea name="text" id="new-tweet-text" spellcheck="true" wrap="off" rows="1"
+              placeholder="What are you humming about?" autofocus></textarea>
           </div>
           <hr size="5" width="100%" color="black">
           <div class="new-tweet-submit-container">
@@ -79,7 +80,8 @@
       </section>
 
       <!-- Posted Tweets Container -->
-      <section class="tweet-outer-container"></article>
+      <section class="tweet-outer-container">
+        </article>
 
     </main>
   </body>
