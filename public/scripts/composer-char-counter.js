@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('#new-tweet-text').on("input", function() {
+  $('.new-tweet-text').on("input", function() {
     const length = $(this).val().length;
 
     $('.tweet-char-counter').html(140 - length);
