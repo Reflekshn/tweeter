@@ -94,6 +94,8 @@ $(document).ready(function() {
     }).then(function() {
       $input.val("");
       $(".tweet-char-counter").val(140);
+      //clean container from previous tweets, bcs we render them later in loadTweets
+      $(".tweet-outer-container").empty();
       loadTweets();
     });
   });
